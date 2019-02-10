@@ -1,5 +1,6 @@
 from xmlrpc import client
 
+
 class LibraryAPI():
 
     def __init__(self, srv, port, db, user, pwd):
@@ -33,9 +34,9 @@ class LibraryAPI():
     def unlink(self, id):
         return self.execute('unlink', [[id]])
 
-    if __name__ == '__main__':
-        srv, port, db = 'localhost', 8069, 'library2'
-        user, pwd = 'admin', 'admin'
-        api = LibraryAPI(srv, port, db, user, pwd)
-        from pprint import pprint
-        pprint(api.search_read())
+if __name__ == '__main__':
+    srv, port, db = 'localhost', 8069, 'library2'
+    user, pwd = 'admin', 'admin'
+    api = LibraryAPI(srv, port, db, user, pwd)
+    from pprint import pprint
+    pprint(api.search_read())

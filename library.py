@@ -2,7 +2,7 @@
 
 from argparse import ArgumentParser
 
-from library_api import LibraryAPI
+from library_odoorpc import LibraryAPI
 
 
 parser = ArgumentParser()
